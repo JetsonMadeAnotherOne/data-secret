@@ -4,7 +4,8 @@
       <router-link to="/data-sources"><img alt="Vue logo" src="../assets/logo.svg"></router-link>
     </div>
     <div class="side">
-      <input type="text" name="">
+      <input type="search" placeholder= "Search" name="">
+
       <img alt="bell" src="../assets/bell.png">
       <img alt="user" src="../assets/user.png">
     </div>
@@ -29,17 +30,24 @@
       display: flex;
       align-items: center;
     }
+
     input {
-      font-size: 16px;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
       padding: 10px;
-      display: block;
+      display: flex;
+      align-items: center;
       width: 300px;
-      border: none;
       border-bottom: 1px solid #ccc;
       border-inline-color: orangered;
       border: 3px solid orange;
       box-shadow: 1px 1px 2px 0 darkorange;
       margin-right: 5%;
+      background: #F0F1F7;
+      border-radius: 7px;
     }
 
     input:focus {
