@@ -1,16 +1,21 @@
 <template>
-  <div class="header">
-    <div class="side">
-      <router-link to="/data-sources"><img alt="Vue logo" src="../assets/logo.svg"></router-link>
-    </div>
-    <div class="side">
-      <input type="search" placeholder="Search">
-      <div class="bell">
-        <img alt="bell" src="../assets/bell.png">
-      </div>
-      <img alt="user" src="../assets/user.png" class="round">
-      <div class="menu" v-on:click='showModal'>
-        <span class="username">Joe S Gardner</span>
+  <div class="section">
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <router-link to="/data-sources"><img alt="Vue logo" src="../assets/logo.svg" class="logo"></router-link>
+          <div class="side">
+            <input type="search" placeholder="Search">
+            <div class="bell">
+              <div class="red-dot"></div>
+              <img alt="bell" src="../assets/img/icons/bell.png">
+            </div>
+            <img alt="user" src="../assets/user.png" class="round">
+            <div class="menu">
+              <div class="username" v-on:click='showModal'>Joe S Gardner</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -34,87 +39,127 @@
 
 <style scoped lang="less">
   .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    .logo {
+      position: relative;
+      right: 17px;
+    }
+
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 9999px;
+      background: #FFFFFF;
+      box-shadow: 0px 4px rgba(189, 196, 224, 0.192);
+    }
+
+    &:before {
+      right: 100%;
+    }
+
+    &:after {
+      left: 100%;
+    }
+
+    position: relative;
     height: 80px;
     width: 100%;
-    position: fixed;
-    top: 0;
     left: 0;
+    right: 0;
+    justify-content: space-between;
+    display: block;
+    align-items: center;
     background: #FFFFFF;
+    box-shadow: 0px 4px rgba(189, 196, 224, 0.192);
+
+    .row {
+      padding-right: 30px;
+      padding-left: 30px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
     .side {
       display: flex;
       align-items: center;
       position: relative;
-      /*&:before {
-        content: url(./../assets/img/icons/search_icon.png);
-      }*/
     }
 
 
     .bell {
-      margin-right: 5%;
+      margin-right: 36.98px;
       position: relative;
-      &:before {
-        content: "";
-        width: 6px;
-        height: 6px;
-        background: darkorange;
-        -moz-border-radius: 50px;
-        -webkit-border-radius: 50px;
-        border-radius: 50px;
-        position: absolute;
-        left: 61.77%;
-        right: 29.52%;
-        top: 6.16%;
-        bottom: 59.69%;
-      }
     }
 
+    .red-dot {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: darkorange;
+      border-radius: 50px;
+      position: absolute;
+      left: 61.77%;
+      right: 90.52%;
+      top: 6.16%;
+      bottom: 59.69%;
+      box-shadow: -1.5px 2px 7px 0.2px orange;
+    }
+
+
     .username {
-      white-space: nowrap;
-      color: #220033;
+      position: relative;
       font-family: Poppins;
       font-style: normal;
       font-weight: 600;
       font-size: 14px;
       line-height: 25px;
-
+      white-space: nowrap;
+      color: #220033;
+      right: -2px;
+      cursor: pointer;
     }
+
     .username::after {
       content: url(./../assets/img/icons/vector.png);
+      position: relative;
+      right: -16.5px;
+      cursor: pointer;
     }
+
     .round {
       border-radius: 100px;
-      margin-right: 5%;
+      margin-right: 15px;
     }
 
     input {
+      outline: none;
       font-family: Poppins;
       font-style: normal;
       font-weight: normal;
       font-size: 14px;
       line-height: 24px;
       padding: 10px;
+      height: 40px;
+      width: 300px;
       display: flex;
       align-items: center;
-      width: 300px;
       position: relative;
+      border-radius: 7px;
+      padding-left: 25px;
+      margin-right: 42px;
       background: #F0F1F7;
       background-image: url(./../assets/img/icons/search_icon.png);
-      background-repeat: no-repeat; /*Убираем повтор изображения*/
-      background-position: 4px; /*Позиционируем*/
-      outline: none; /*убираем стандартную обводку браузера*/
-      -moz-border-radius: 5px; /*закругляем углы для Mozilla*/
-      -webkit-border-radius: 5px; /*закругляем углы для Chrome, Safari*/
-      border-radius: 7px; /*закругляем углы для остальных браузеров*/
-      padding-left: 20px; /*отступ слева от ввода, чтобы текст не был на картинке(выбирать по размеру картинки)*/
-      height: 40px; /*высота строки ввода*/
-      margin-right: 5%;
-
+      background-repeat: no-repeat;
+      background-position: 4.25px;
     }
 
+
+    .section {
+      width: 50%;
+      margin: 0 auto;
+    }
   }
 </style>
