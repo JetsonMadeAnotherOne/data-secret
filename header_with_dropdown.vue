@@ -135,7 +135,6 @@
       position: relative;
       right: -16.5px;
       cursor: pointer;
-      padding-right: 12px;
     }
 
     .round {
@@ -167,7 +166,7 @@
 
     .modal-db {
       margin-top: 23%;
-      margin-left: 25%;
+      margin-left: 29.5%;
       position: absolute;
       width: 100%;
       height: 100%;
