@@ -2,7 +2,7 @@
   <div>
     <HeaderComponent/>
     <div class="headers">
-      <h1>Data Secrets</h1>
+      <h1>Data Sources</h1>
       <button
         class='button-main'
         @click="goTo(`/data-secrets/add`,false)"
@@ -153,8 +153,6 @@
     }
 
     .edit, .delete {
-    /*  position: relative;
-      top: 18px;*/
       cursor: pointer;
     }
 
@@ -173,7 +171,7 @@
 
       tr {
         &:hover {
-          background: violet !important;
+          background: #FFFFFF !important;
           box-shadow: 0px 20px 20px lightgrey;
           border-radius: 7px;
 
@@ -186,14 +184,13 @@
       }
 
       td {
-        //height: 75px;
         font-family: Poppins;
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
         color: #4D526E;
         padding: 21px;
-position: relative;
+        position: relative;
 
         &:nth-child(1) {
           font-weight: 600;
@@ -203,8 +200,6 @@ position: relative;
 
         &:nth-child(3) {
           &:after {
-            /*position: absolute;
-            right: 9%;*/
             content: url(./../assets/img/icons/vector_stroke.png);
             margin-left: 45px;
             cursor: pointer;
@@ -213,8 +208,6 @@ position: relative;
 
         &:nth-child(4) {
           &:after {
-            /*position: absolute;
-            right: 9%;*/
             content: url(./../assets/img/icons/vector_stroke.png);
             cursor: pointer;
             margin-left: 45px;
@@ -223,9 +216,8 @@ position: relative;
       }
 
       th {
-       // height: 57px;
-        //padding-bottom: 20px;
         padding: 16px;
+
         span {
           font-family: Poppins;
           font-style: normal;
