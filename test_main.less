@@ -1,0 +1,121 @@
+body {
+  background-color: @primary-color;
+  position: relative;
+}
+
+/*.theme--light.v-data-table tbody tr:not(:last-child) td:last-child, .theme--light.v-data-table tbody tr:not(:last-child) td:not(.v-data-table__mobile-row) {
+  &:hover {
+    background: red !important;
+  }
+}*/
+
+/*.theme--light.v-data-table tbody tr:not(:last-child) td:not(.v-data-table__mobile-row) {
+    &:hover {
+        background: blue !important;
+    }
+
+}*/
+
+body .table .theme--light.v-data-table thead tr {
+  &:hover {
+    box-shadow: none!important;
+  }
+}
+
+.button-main,
+.button-secondary {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  heigth: 40px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.button-main {
+  color: white;
+  border: 1px solid @accent-color;
+  background-color: @accent-color;
+}
+
+.button-secondary {
+  /*position: relative;
+      top: 19px;*/
+  color: #4D526E;
+  border: 1px solid #9092A4;
+  font-weight: 600;
+  background-color: transparent;
+
+  &:hover {
+    background-color: #4D526E;
+    color: #fff;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, button, input {
+  font-family: Poppins;
+}
+
+.main-input {
+  height: 50px;
+  width: 100%;
+  color: #878AA0;
+  background-color: #F0F1F7;
+  padding: 0 24px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1B1C1E;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.main-label {
+  width: 100%;
+  display: inline-block;
+  text-align: left;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 21px;
+  color: #220033;
+  margin-bottom: 7px;
+}
+
+.modal-header {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 65px;
+}
+
+
+.red-color {
+  background: @red-color;
+}
+
+.green-color {
+  background: @green-color;
+}
+
+.yellow-color {
+  background: @yellow-color;
+}
+
+.blue-color {
+  background: @blue-color;
+}
+
+.fiolet-color {
+  background: @fiolet-color;
+}
+
+.orange-color {
+  background: @orange-color;
+}
+
+.light-gray-color {
+  background: @light-gray-color;
+}
+
+.front-orange-color {
+  color: @orange-color;
+}
